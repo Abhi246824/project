@@ -14,7 +14,7 @@ public class Operations {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                int id = rs.getInt("food_id");
+                int id = rs.getInt("food_iad");
                 String name = rs.getString("name");
                 double carbo = rs.getDouble("carbo");
                 double protein = rs.getDouble("protein");

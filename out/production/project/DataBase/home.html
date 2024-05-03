@@ -106,7 +106,7 @@
             
         }
         .bg{
-
+            
             background-size: 100% 100%;
             background-position: center;
             
@@ -319,7 +319,7 @@
         <div class="form">
             <form class="foodenergy">
                 <label for="item1">Items</label>
-                <input type="text" id="item1" list="list-items" required><br><br>
+                <input type="text" id="item1" required><br><br>
         
                 <label for="quantity1">Quantity (in Grams):</label>
                 <input type="number" id="quantity1" required><br><br>
@@ -335,7 +335,7 @@
         <div class="form">
             <form class="foodenergy">
                 <label for="item2">Items</label>
-                <input type="text" id="item2" list="list-items" required><br><br>
+                <input type="text" id="item2" required><br><br>
         
                 <label for="quantity2">Quantity (in Grams):</label>
                 <input type="number" id="quantity2" required><br><br>
@@ -352,7 +352,7 @@
         <div class="form">
             <form class="foodenergy">
                 <label for="item3">Items</label>
-                <input type="text" id="item3" list="list-items" required><br><br>
+                <input type="text" id="item3" required><br><br>
         
                 <label for="quantity3">Quantity (in Grams):</label>
                 <input type="number" id="quantity3" required><br><br>
@@ -377,9 +377,9 @@
             <div class="dev">
                 <h4>Developed by:</h4>
                 <h6>Group No: D-06</h6>
-                <p>22N31A05R0</p>
-                <p>22N31A05N4</p>
-                <p>22N31A05N3</p>
+                <p>22N31A05</p>
+                <p>22N31A05</p>
+                <p>22N31A05</p>
             </div>
            
             
@@ -388,86 +388,83 @@
     
     <script>
         function submitForm() {
-            var item = document.getElementById("item1").value;
-            var quantity = document.getElementById("quantity1").value;
-            var date = document.getElementById("date1").value;
+        var item = document.getElementById("item1").value;
+        var quantity = document.getElementById("quantity1").value;
+        var date = document.getElementById("date1").value;
 
-            var data = {
-                item: item,
-                quantity: quantity,
-                date: date
-            };
+        var data = {
+            item: item,
+            quantity: quantity,
+            date: date
+        };
 
-            // Send form data to backend using AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        alert("Data inserted successfully");
-                    } else {
-                        alert("Error: " + xhr.status);
-                    }
+        // Send form data to backend using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Data inserted successfully");
+                } else {
+                    alert("Error: " + xhr.status);
                 }
-            };
-            xhr.send(JSON.stringify(data));
-        }
+            }
+        };
+        xhr.send(JSON.stringify(data));
+    }
+    function submitForm() {
+        var item = document.getElementById("item2").value;
+        var quantity = document.getElementById("quantity2").value;
+        var date = document.getElementById("date2").value;
 
-        function submitForm() {
-            var item = document.getElementById("item2").value;
-            var quantity = document.getElementById("quantity2").value;
-            var date = document.getElementById("date2").value;
+        var data = {
+            item: item,
+            quantity: quantity,
+            date: date
+        };
 
-            var data = {
-                item: item,
-                quantity: quantity,
-                date: date
-            };
-
-            // Send form data to backend using AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        alert("Data inserted successfully");
-                    } else {
-                        alert("Error: " + xhr.status);
-                    }
+        // Send form data to backend using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Data inserted successfully");
+                } else {
+                    alert("Error: " + xhr.status);
                 }
-            };
-            xhr.send(JSON.stringify(data));
-        }
+            }
+        };
+        xhr.send(JSON.stringify(data));
+    }
+    function submitForm() {
+        var item = document.getElementById("item3").value;
+        var quantity = document.getElementById("quantity3").value;
+        var date = document.getElementById("date3").value;
 
-        function submitForm() {
-            var item = document.getElementById("item3").value;
-            var quantity = document.getElementById("quantity3").value;
-            var date = document.getElementById("date3").value;
+        var data = {
+            item: item,
+            quantity: quantity,
+            date: date
+        };
 
-            var data = {
-                item: item,
-                quantity: quantity,
-                date: date
-            };
-
-            // Send form data to backend using AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        alert("Data inserted successfully");
-                    } else {
-                        alert("Error: " + xhr.status);
-                    }
+        // Send form data to backend using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/insertData", true); // Change URL accordingly
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Data inserted successfully");
+                } else {
+                    alert("Error: " + xhr.status);
                 }
-            };
-            xhr.send(JSON.stringify(data));
-        }
-
+            }
+        };
+        xhr.send(JSON.stringify(data));
+    }
         // JavaScript for slideshow functionality
         var slideIndex = 1;
         showSlides(slideIndex);
@@ -484,84 +481,18 @@
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].style.display = "none";  
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
         }
     </script>
-        <datalist id='list-items'>
-        <option value="Glass of Milk"></option>
-        <option value="Cup of Butter"></option>
-        <option value="Cheese"></option>
-        <option value="Ice Cream"></option>
-        <option value="Margarine"></option>
-        <option value="Eggs"></option>
-        <option value="Pork"></option>
-        <option value="Bowl of Chicken"></option>
-        <option value="Fish"></option>
-        <option value="Cup of Beans"></option>
-        <option value="Bowl of Cabbage"></option>
-        <option value="Carrot"></option>
-        <option value="Cup of Cauliflower"></option>
-        <option value="Bowl of Peas"></option>
-        <option value="Cup of Potatoes"></option>
-        <option value="Bowl of Tomatoes"></option>
-        <option value="Apples"></option>
-        <option value="Bananas"></option>
-        <option value="Bowl of Cherries"></option>
-        <option value="Cup of Graphes"></option>
-        <option value="Oranges"></option>
-        <option value="Cup of Pea Nuts"></option>
-        <option value="Glass of Beer"></option>
-        <option value="Piece of Bread"></option>
-        <option value="Bowl of Rice"></option>
-        <option value="Glass of Cornflakes with Milk"></option>
-        <option value="Bowl of Chocolate Biscuits"></option>
-        <option value="Cup of Wheat Bran"></option>
-        <option value=""></option>
-        </datalist>
-    <script>
-        document.getElementById('foodForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-
-            // Capture form data
-            var formData = new FormData(document.getElementById('foodForm'));
-
-            // Send form data to backend
-            fetch('http://localhost:8080/saveFoodData', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text(); // Assuming backend returns a text response
-                })
-                .then(data => {
-                    console.log(data); // Log response from backend
-                    alert('Food data saved successfully!'); // Show success message
-                    document.getElementById('foodForm').reset(); // Optionally, reset the form after submission
-                })
-                .catch(error => {
-                    console.error('Error:', error); // Log any errors that occur
-                    alert('An error occurred. Please try again.'); // Show error message
-                });
-        });
-    </script>
-
-
     <button onclick="performOperation('display')">Display</button>
     <button onclick="performOperation('calculate')">Calculate</button>
 </body>
